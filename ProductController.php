@@ -72,7 +72,7 @@ class ProductController extends Controller
 
 
 
-
+// with PRODUCT PHOTO controller
 
 
 <?php
