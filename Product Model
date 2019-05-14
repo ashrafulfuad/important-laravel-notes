@@ -1,0 +1,12 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;      // added for using soft deleting
+
+class Product extends Model
+{
+    use SoftDeletes;                              // added for using soft deleting
+    protected $fillable = ['product_name', 'product_price', 'product_color', 'product_size'];  //for updating
+}
