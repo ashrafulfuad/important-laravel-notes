@@ -17,7 +17,7 @@ class ProductController extends Controller
     function productinsert(Request $request)
     {
       $request->validate([
-        'product_name' => 'required',
+        'product_name' => 'required|unique:products',
         'product_price' => 'required|numeric',
       ]);
       Product::insert([
@@ -104,7 +104,7 @@ class ProductController extends Controller
       }
       print_r($color_collections);
       $request->validate([
-        'product_name' => 'required',
+        'product_name' => 'required|unique:products',
         'product_price' => 'required|numeric',
         'color' => 'required',
       ]);
