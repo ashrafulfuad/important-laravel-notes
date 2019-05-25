@@ -1,15 +1,21 @@
 function sliderinsert()
     {
         print_r($_POST);                    // checking all form data after submitting in PHP
-        echo $_POST['product_name'];      // checking form data after submitting in PHP specific array
+        echo $_POST['product_name'];        // checking form data after submitting in PHP specific array
     }
 
 
 function sliderinsert(Request $request)
     {
       print_r($request->all());             // checking all form data after submitting in Laravel
-      echo $request->product_name;        // checking form data after submitting in Laravel specific array
+      echo $request->product_name;          // checking form data after submitting in Laravel specific array
     }
     
-    
+
+if($request->hasFile('slider_photo')){      //  checking is there any photo ...?
+        echo "ase";
+      }
+      else {
+        echo "nai";
+      }
     
